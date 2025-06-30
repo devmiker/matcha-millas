@@ -1,7 +1,9 @@
 services:
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: mssql
+    container_name: mssql-auth
+    networks:
+      - matcha-network
     environment:
       SA_PASSWORD: "Str0ngP@ssw0rd!"
       ACCEPT_EULA: "Y"
@@ -21,11 +23,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     networks:
-      - matcha-millas-network
+      - matcha-network
 
 volumes:
   mssql_data:
 
 networks:
-  matcha-millas-network:
+  matcha-network:
     driver: bridge
