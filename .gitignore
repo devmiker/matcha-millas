@@ -1,0 +1,36 @@
+# .NET build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider/VSCode
+.idea/
+.vscode/
+
+# VS for Mac
+*.pidb
+*.userprefs
+
+# Logs
+*.log
+
+# dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Entity Framework
+Migrations/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# others
+*.db
+.env
+*.DS_Store
